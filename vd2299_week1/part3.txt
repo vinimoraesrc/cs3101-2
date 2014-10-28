@@ -1,0 +1,13 @@
+For this expression to make sense and return no exceptions,
+the variable x would have to have 'Unit' type and y would
+need to have a numeric type. For instance:
+
+> var y = 5
+y: Int = 5
+> var x = {}
+x: Unit = ()
+> x = y = 1
+x: Unit = ()
+
+If we println(x), we can see that x is still (), while y now has a value
+of 1.
