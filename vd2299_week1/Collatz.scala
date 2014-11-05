@@ -58,5 +58,7 @@ println(longest_collatz(1000000))
  * The naive implementation gets very slow because the collatz function
  * is being called several times and for ever increasing numbers . One way to 
  * improve the longest_collatz function woulde be to use a memoized version 
- * of the collatz function.
+ * of the collatz function. If we are required to use this version of the
+ * collatz function, however, we could speed up longest_collatz by storing the
+ * number of steps for small numbers and for pair nums.
  */
