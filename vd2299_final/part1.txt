@@ -1,0 +1,35 @@
+cs3101-2 Programming Languages: Scala
+Final Exam
+Vinicius de Moraes Rego Cousseau (vd2299)
+=========================================
+
+======
+Part 1
+======
+
+a) Variables declared using var can have their value changed after the first definition, whereas variables
+declared using val cannot. declaring variables using val fits the functional programming style because
+it reduces the possibility of side effects, i.e. functions are not able to modify variables declared
+using val in addition to returning a value.
+
+b) The variable z has the type List[Any] because it is constructed as a List containing both a variable
+of type Int and a variable of type String, thus scala isn't able to create a list of a single type. The type
+Any is at the top of scala's type hierarchy, meaning that a List[Any] can contain values of any given type
+inside it.
+
+c) Scala does not support inheritance from multiple classes, whereas traits are "fundamental units of code
+reuse" which can be mixed in by several classes without any limit. It can be said that scala classes are
+analogue to classes in java and traits are analogue to interfaces in java. While classes can receive parameters
+as input, traits cannot. Both traits and classes can extend some other class, however. Both traits and classes
+can overload methods of superclasses.
+
+d) Singleton objects are objects which can be defined inside classes to provide several functionalities such as
+creating a repository for utility methods and defining companion objects for classes. They differ from
+class instances mainly because of the fact that within their scope they can define additional functionality,
+as stated above. A companion object is a singleton object with the same name of the class it is defined on,
+which main purpose (apart from defining other functionalities) is to provide a way for the user to define 
+objects of the class without having to use tiresome syntax, which can be accomplished by defining an
+'apply' method. Scala then converts f(a) into f.apply(a).
+
+e) A static type system makes the code more readable and less error-prone, while providing less freedom to
+the developer by imposing more restrictions. The static type system also tends to be faster than a dynamic one.

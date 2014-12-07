@@ -1,0 +1,39 @@
+cs3101-2 Programming Languages: Scala
+Final Exam
+Vinicius de Moraes Rego Cousseau (vd2299)
+=========================================
+======
+Part 2
+======
+
+The progam prints the following:
+function4
+function2
+function2
+function1
+function3
+function3
+scala is scala
+
+Sequence of function calls and return values:
+
+1) function4 is called and then the line println("function4") is executed.
+
+2) the line val z = fun("scala") is executed. Since the parameter fun was function2,
+it is evaluated, which causes function2 to execute its println("function2") line and return
+the function, which is assigned to z.
+
+3) the line val y = fun("is") is executed, which causes function2 to be evaluated again,
+causing it to print one more time and return the function, which is assigned to the val y.
+
+4) the line z(y(x)) is executed. Scala first evaluated 'x'. Since the parameter for x was
+the function1, it is called, which causes the program to print "function1". function1 then returns
+"scala".
+
+5) "scala" is passed as an argument to the function previously assigned to val y. This function then prints "function3" and returns "is scala".
+
+6) the function assigned to val z receives "is scala" as a parameter and then executes, first
+printing "function3" again and then returning "scala is scala".
+
+7) finally, the result of the call to function4(function2, function1) is printed, so the terminal
+displays "scala is scala".
